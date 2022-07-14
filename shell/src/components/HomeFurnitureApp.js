@@ -13,7 +13,7 @@ export default () => {
                 const { pathname } = history.location;
 
                 if (pathname !== nextPathname) {
-                    history.pushState(nextPathname);
+                    history.push(nextPathname);
                 }
             },
         });

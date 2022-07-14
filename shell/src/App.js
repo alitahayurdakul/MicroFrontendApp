@@ -1,18 +1,21 @@
 import React from 'react';
-import { Switch, Route, Router } from 'react-router-dom';
+import {Router, Route, Switch } from 'react-router-dom';
 import { createBrowserHistory } from 'history';
 import HomeFurnitureApp from './components/HomeFurnitureApp';
 import UpHeader from './components/Header/UpHeader';
-
+import NavigateHeader from './components/Header/NavigateHeader';
+const history = createBrowserHistory();
 export default () => {
-    const history = createBrowserHistory();
-
+    
     return (
         <Router history={history}>
-            <UpHeader/>
-            <Switch>
-                <Route exact path="/" component={HomeFurnitureApp} />
-            </Switch>
+            <div>
+                <UpHeader />
+                <NavigateHeader />
+                <Switch>
+                    <Route path="/" component={HomeFurnitureApp} />
+                </Switch>
+            </div>
         </Router>
     )
 

@@ -1,9 +1,9 @@
-import { createBrowserHistory, createMemoryHistory } from "history";
 import React from "react";
 import { createRoot } from "react-dom/client";
+import { createBrowserHistory, createMemoryHistory } from "history";
 import App from './App';
 
-const mount = (el, {initialPath,onNavigate,defaultHistory}) => {
+const mount = (el, { onNavigate, defaultHistory, initialPath }) => {
     const history = defaultHistory || createMemoryHistory({
         initialEntries: [initialPath]
     });
